@@ -73,6 +73,12 @@ div[class*="-button"] {
   background-color: #ec3;
   background-image: url(../images/moon.svg);
 }
+.font-size-button {
+  left: 0.5rem;
+  bottom: 5.5rem;
+  background-color: #ec3;
+  background-image: url(../images/font-size.svg);
+}
 
 @media not all and (hover) {
   .ace_editor { font-size: 1rem; }
