@@ -18,8 +18,10 @@ body {
   display: flex;
   flex-direction: row;
 }
-#app > div {
+.canvas,
+.code-container {
   flex: 1;
+  width: 0;
 }
 .console {
   position: absolute;
@@ -38,7 +40,7 @@ body {
   font-family: monospace;
 }
 /* center everything on the canvas */
-.canvas-container {
+.canvas {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,18 +72,24 @@ div[class*="-button"] {
 .dark-mode-button {
   left: 0.5rem;
   bottom: 3rem;
-  background-color: #ec3;
+  background-color: #fff9;
   background-image: url(../images/moon.svg);
 }
 .font-size-button {
   left: 0.5rem;
   bottom: 5.5rem;
-  background-color: #ec3;
+  background-color: #fff9;
   background-image: url(../images/font-size.svg);
 }
 
-@media not all and (hover) {
+@media not all and (hover), (max-aspect-ratio: 1/1) {
   .ace_editor { font-size: 1rem; }
   #app { flex-direction: column-reverse; }
   .console { width: 100%; }
+  .canvas,
+  .code-container {
+    width: initial;
+    height: 0;
+  }
+
 }
